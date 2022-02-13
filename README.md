@@ -10,10 +10,13 @@
   <img src="./src/main/java/img/capa-livro-java-8-pratico.jpg" />
 </p>
 
-
 ### Pré-requisitos para a execução desse projeto
 * Instalar o [JAVA](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html) na sua máquina.
 * Usar uma IDE de sua preferência que tenha suporte ao JAVA, esse projeto foi usado a IDE [Apache NetBeans 12.2](https://netbeans.apache.org/download/index.html).
+
+## Links extras
+* [Código fonte original desse Livro](https://github.com/peas/java8)
+* [JDK Enhancement Proposals (JEPs)](https://openjdk.java.net/jeps/0)
 
 ## :rocket: Minhas Skills
 ### Experiências com desenvolvimentos

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package capitulo2.lambda;
+package capitulo4.interfaces.methods;
 
-public class Usuario {
+class Usuario {
 
     private String nome;
     private int pontos;
@@ -34,11 +34,6 @@ public class Usuario {
         return moderador;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario{" + "nome=" + nome + ", pontos=" + pontos + ", moderador=" + moderador + '}';
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -51,4 +46,8 @@ public class Usuario {
         this.moderador = moderador;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" + "nome=" + nome + ", pontos=" + pontos + ", moderador=" + moderador + '}';
+    }
 }
