@@ -5,8 +5,13 @@
  */
 package capitulo3.interfaces.funcionais;
 
+/**
+ *
+ * @author Leonel
+ * @param <T>
+ */
 @FunctionalInterface
-interface Validador<T> {
-
-    boolean valida(T t);
+public interface Capitulo3_3_AnotacaoInterface<T> {
+    
+    boolean valid();
 }

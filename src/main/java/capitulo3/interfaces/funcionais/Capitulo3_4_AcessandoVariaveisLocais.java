@@ -9,9 +9,9 @@ package capitulo3.interfaces.funcionais;
  *
  * @author leone
  */
-public class Capitulo3_4_Acessando_Variaveis_Locais {
+public class Capitulo3_4_AcessandoVariaveisLocais {
 
-    public Capitulo3_4_Acessando_Variaveis_Locais() {
+    public Capitulo3_4_AcessandoVariaveisLocais() {
 
         final int numero = 5;
 
@@ -23,6 +23,6 @@ public class Capitulo3_4_Acessando_Variaveis_Locais {
 
     public static void main(String[] args) {
 
-        new Capitulo3_4_Acessando_Variaveis_Locais();
+        new Capitulo3_4_AcessandoVariaveisLocais();
     }
 }

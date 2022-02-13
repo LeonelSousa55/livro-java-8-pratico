@@ -9,12 +9,12 @@ package capitulo3.interfaces.funcionais;
  *
  * @author leone
  */
-public class Capitulo3_2_Sua_Propria_Interface {
+public class Capitulo3_2_SuaPropriaInterface {
 
-    public Capitulo3_2_Sua_Propria_Interface() {
+    public Capitulo3_2_SuaPropriaInterface() {
 
         /*Validação normal criando uma classe abstrata*/
-        Validador<String> validadorCEP = new Validador<String>() {
+        Capitulo3_2_InterfaceValidador<String> validadorCEP = new Capitulo3_2_InterfaceValidador<String>() {
             @Override
             public boolean valida(String valor) {
                 return valor.matches("[0-9]{5}-[0-9]{3}");
@@ -23,12 +23,12 @@ public class Capitulo3_2_Sua_Propria_Interface {
         System.err.println(validadorCEP.valida("75072-150"));
 
         /*Validação com lambda*/
-        Validador<String> validadorCEPComLambda = valor -> valor.matches("[0-9]{5}-[0-9]{3}");
+        Capitulo3_2_InterfaceValidador<String> validadorCEPComLambda = valor -> valor.matches("[0-9]{5}-[0-9]{3}");
         System.err.println(validadorCEPComLambda.valida("75072-150"));
     }
 
     public static void main(String[] args) {
 
-        new Capitulo3_2_Sua_Propria_Interface();
-    }
+        new Capitulo3_2_SuaPropriaInterface();
+    }  
 }
