@@ -14,6 +14,11 @@
 * Instalar o [JAVA](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html) na sua máquina.
 * Usar uma IDE de sua preferência que tenha suporte ao JAVA, esse projeto foi usado a IDE [Apache NetBeans 12.2](https://netbeans.apache.org/download/index.html).
 
+### Keywords by chapters
+* Chapter 2: Lambda, List, Arrays.asList, forEach, Consumer, accept.
+* Chapter 3: Thread, Runnable, Lambda, addActionListener com Lambda, @FunctionalInterface, matches, variáveis locais com Lambda.
+* Chapter 4: Collection, methods default, Lambda, Arrays.asList, andThen, Predicate, removeIf.
+
 ## Links extras
 * [Código fonte original desse Livro](https://github.com/peas/java8)
 * [JDK Enhancement Proposals (JEPs)](https://openjdk.java.net/jeps/0)

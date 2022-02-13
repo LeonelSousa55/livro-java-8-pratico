@@ -5,7 +5,6 @@
  */
 package capitulo4.interfaces.methods;
 
-import capitulo2.lambda.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -24,15 +23,25 @@ public class Capitulo4 {
         Usuario u2 = new Usuario("Rodrigo Turini", 120);
         Usuario u3 = new Usuario("Guilherme Silveira", 190);
 
-        List<Usuario> usuarios = Arrays.asList(u1, u2, u3);
+        System.out.println("\n***Usando forEach com lambda***");
+        ArrayList<Usuario> arrayList = new ArrayList();
+        arrayList.add(u1);
+        arrayList.add(u2);
+        arrayList.add(u3);
+        arrayList.forEach(u -> System.out.println(u.getNome()));
 
         /*As interfaces agora podem tem methods default, o objetivo desses méthods 
         é que eles não precisam serem implementados obrigatoriamente.*/
+        System.out.println("\n***Usando o andThen da interface consumer***");
+        List<Usuario> usuarios = Arrays.asList(u1, u2, u3);
         Consumer<Usuario> mostraMensagem = u -> System.out.println("antes de imprimir os nomes");
-        Consumer<Usuario> imprimeNome = u -> System.out.println(u.getNome());//////////
+        Consumer<Usuario> imprimeNome = u -> System.out.println(u.getNome());
         usuarios.forEach(mostraMensagem.andThen(imprimeNome));
 
-        /*Usando uma classe anonima Predicate que será usada para remover os dados da collection*/
+        /*Usando uma classe anonima Predicate que será usada para remover os dados da collection,
+        para se usar o removeIf a lista não pode ser imutável por isso nesse caso
+        será usando o ArrayList*/
+        System.out.println("\n***Usando o removeIf a partir de um predicate criado***");
         List<Usuario> usuarios2 = new ArrayList<>();
         usuarios2.addAll(usuarios);
         Predicate<Usuario> predicado = new Predicate<Usuario>() {
@@ -45,6 +54,8 @@ public class Capitulo4 {
         usuarios2.forEach(u -> System.out.println(u));
 
         /*Removendo os dados da colection sem ser preciso criar a class Predicate apenas com lambd*/
-        usuarios2.removeIf(u -> u.getPontos() > 160);
+        System.out.println("\n***Removendo os dados direto sem precisar criar o predicato***");
+        usuarios2.removeIf(u -> u.getPontos() > 120);
+        usuarios2.forEach(u -> System.out.println(u));
     }
 }
