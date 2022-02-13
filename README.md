@@ -6,7 +6,9 @@
 ## :snowflake: Sobre o projeto
 ### Esse projeto se refere ao estudo referente as features do JAVA 8, apresentadas no livro:
 ## Java 8 Prático
-![contexto](./src/main/java/img/capa-livro-java-8-pratico.jpg)
+<p align="center">
+  <img src="./src/main/java/img/capa-livro-java-8-pratico.jpg" />
+</p>
 ### Pré-requisitos para a execução desse projeto
 * Instalar o [JAVA](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html) na sua máquina.
 * Usar uma IDE de sua preferência que tenha suporte ao JAVA, esse projeto foi usado a IDE [Apache NetBeans 12.2](https://netbeans.apache.org/download/index.html).
