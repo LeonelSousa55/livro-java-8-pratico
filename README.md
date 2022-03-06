@@ -18,6 +18,9 @@
 * Chapter 2: Lambda, List, Arrays.asList, forEach, Consumer, accept.
 * Chapter 3: Thread, Runnable, Lambda, addActionListener com Lambda, @FunctionalInterface, matches, variáveis locais com Lambda.
 * Chapter 4: Collection, methods default, Lambda, Arrays.asList, andThen, Predicate, removeIf.
+* Chapter 5: Comparator, Collections.sort, Comparator.comparing, Comparator.naturalOrder(), Comparator.comparingInt.
+* Chapter 6: Consumer, Function, Usuario::getPontos, thenComparing, Comparator.nullsLast, run, accept, Usuario::new, criadorDeUsuarios.get().
+* Chapter 7: Stream<Usuario>, filter, Supplier, BiConsumer, collect(Collectors.toList()), Collectors.toSet(), map, IntStream, average, orElse, Optional.
 
 ## Links extras
 * [Código fonte original desse Livro](https://github.com/peas/java8)

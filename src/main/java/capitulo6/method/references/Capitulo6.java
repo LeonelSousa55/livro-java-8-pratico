@@ -8,13 +8,10 @@ package capitulo6.method.references;
 import java.util.ArrayList;
 import java.util.Comparator;
 import static java.util.Comparator.comparing;
-import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.IntBinaryOperator;
 import java.util.function.Supplier;
-import java.util.function.ToIntBiFunction;
 
 /**
  *
