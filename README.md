@@ -22,6 +22,7 @@
 * Chapter 6: Consumer, Function, Usuario::getPontos, thenComparing, Comparator.nullsLast, run, accept, Usuario::new, criadorDeUsuarios.get.
 * Chapter 7: Stream, filter, Supplier, BiConsumer, collect, Collectors.toSet, map, IntStream, average, orElse, Optional.
 * Chapter 8: comparing, stream, filter, sorted, limit, collect, findAny, peek. max, sum, reduce, anyMatch, Random, boxed, findFirst, Files, Paths, distinct.
+* Chapter 9: Stream, filter, flatMap, Map, Path, toMap, computeIfAbsent, groupingBy, partitioningBy, mapping, summingInt, joining, parallel, LongStream.range.
 
 ## Links extras
 * [Código fonte original desse Livro](https://github.com/peas/java8)
