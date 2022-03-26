@@ -24,6 +24,7 @@
 * Chapter 8: comparing, stream, filter, sorted, limit, collect, findAny, peek. max, sum, reduce, anyMatch, Random, boxed, findFirst, Files, Paths, distinct.
 * Chapter 9: Stream, filter, flatMap, Map, Path, toMap, computeIfAbsent, groupingBy, partitioningBy, mapping, summingInt, joining, parallel, LongStream.range.
 * Chapter 10: Calendar, LocalDate, now, plusMonths, LocalTime, atTime, LocalDateTime, atZone, withYear, isBefore, isAfter, isEqual, firstMonthOfQuarter, getDisplayName, ofPattern, between, Period.
+* Chapter 11: stream, sorted, map, ifPresent, flatMap, groupingBy, collect, mapping, ChronoUnit.
 
 ## Links extras
 * [Código fonte original desse Livro](https://github.com/peas/java8)

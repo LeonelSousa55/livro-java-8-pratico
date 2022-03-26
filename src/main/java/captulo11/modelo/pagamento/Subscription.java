@@ -61,8 +61,6 @@ public class Subscription {
 
     public BigDecimal getTotalPaid() {
         return getMonthlyFee()
-                .multiply(new BigDecimal(ChronoUnit.MONTHS
-                        .between(getBegin(),
-                                getEnd().orElse(LocalDateTime.now()))));
+                .multiply(new BigDecimal(ChronoUnit.MONTHS.between(getBegin(), getEnd().orElse(LocalDateTime.now()))));
     }
 }
