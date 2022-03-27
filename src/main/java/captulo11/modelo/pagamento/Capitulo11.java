@@ -5,6 +5,7 @@
 package captulo11.modelo.pagamento;
 
 import java.math.BigDecimal;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.YearMonth;
@@ -33,7 +34,7 @@ public class Capitulo11 {
         Customer guilherme = new Customer("Guilherme Silveira");
         Customer adriano = new Customer("Adriano Almeida");
 
-        Product bach = new Product("Bach Completo", Paths.get("/music/bach.mp3"), new BigDecimal(100));
+        Product bach = new Product("Bach Completo", Paths.get("/" + Type.MUSIC + "/bach.mp3"), new BigDecimal(100));
         Product poderosas = new Product("Poderosas Anita", Paths.get("/music/poderosas.mp3"), new BigDecimal(90));
         Product bandeira = new Product("Bandeira Brasil", Paths.get("/images/brasil.jpg"), new BigDecimal(50));
         Product beauty = new Product("Beleza Americana", Paths.get("beauty.mov"), new BigDecimal(150));
@@ -334,12 +335,40 @@ public class Capitulo11 {
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
         System.out.println(totalPaid);
 
+        System.out.println("\n11.Exercício-Achar o usuario que mais pagou total de valor de subscriptions ate hoje");
+        Map<BigDecimal, Subscription> userQueMaisPagou = subscriptions
+                .stream()
+                .collect(Collectors.toMap(Subscription::getTotalPaid, Function.identity()));
+
+        userQueMaisPagou.entrySet()
+                .stream()
+                .max(Comparator.comparing(Map.Entry::getKey))
+                .ifPresent(u -> System.err.println(u.getValue().getCustomer().getName() + ": " + u.getKey()));
+
+        System.out.println("\n11.Exercício-Usuário que ficou mais meses pagando");
+        Map<Long, Subscription> userComMaisMesesPagando = subscriptions
+                .stream()
+                .collect(Collectors.toMap(Subscription::getMonthPaid, Function.identity()));
+
+        userComMaisMesesPagando.entrySet()
+                .stream()
+                .max(Comparator.comparing(Map.Entry::getKey))
+                .ifPresent(u -> System.err.println(u.getValue().getCustomer().getName() + ": " + u.getKey()));
+
+        System.out.println("\n11.Exercício-Dado um %%Payment%%, gere a lista de %%Paths%% dos arquivos digitais comprados");
+        List<Path> listLines = payment3.getProducts()
+                .stream()
+                .map(p -> p.getFile())
+                .collect(Collectors.toList());
+
+        listLines.forEach(System.out::println);
+
         // EXERCICIOS linha 135/146/239/252
-        // achar o usuario que mais pagou total de valor de subscriptions ate hoje	
-        // achar o usuario que ficou mais meses pagando (independente dela estar ativa ou nao)
+        // achar o usuario que mais pagou total de valor de subscriptions ate hoje              - OK
+        // achar o usuario que ficou mais meses pagando (independente dela estar ativa ou nao)  - OK
         // quero map<Customer, Type>, qual é o tipo de produto que ele mais comprou
         // que tipo de produto é o mais vendido (sum(VIDEO), sum(AUDIO))
-        // Dado um %%Payment%%, gere a lista de %%Paths%% dos arquivos digitais comprados.
+        // Dado um %%Payment%%, gere a lista de %%Paths%% dos arquivos digitais comprados.      - OK
     }
 
     public static void main(String... args) throws Exception {

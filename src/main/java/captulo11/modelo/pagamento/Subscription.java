@@ -63,4 +63,14 @@ public class Subscription {
         return getMonthlyFee()
                 .multiply(new BigDecimal(ChronoUnit.MONTHS.between(getBegin(), getEnd().orElse(LocalDateTime.now()))));
     }
+
+    public Long getMonthPaid() {
+
+        return ChronoUnit.MONTHS.between(getBegin(), getEnd().orElse(LocalDateTime.now()));
+    }
+
+    @Override
+    public String toString() {
+        return "Subscription{" + "monthlyFee=" + monthlyFee + ", begin=" + begin + ", end=" + end + ", customer=" + customer + '}';
+    }
 }
